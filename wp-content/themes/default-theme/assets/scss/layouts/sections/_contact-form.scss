@@ -1,0 +1,238 @@
+.contact {
+    background-color: $blueLight;
+    padding: 100px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media (max-width: $largeBreakpoint){
+        padding: 50px 0px;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width: $largeBreakpoint){
+            flex-wrap: wrap;
+        }
+    }
+    &__text{
+        width: 100%;
+        max-width: 610px;
+        background-image: var(--text-bg-image);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        padding: 175px 0 100px;
+
+        @media (max-width: $largeBreakpoint){
+            padding: 150px 0 70px;
+        }
+        @media (max-width: $smallBreakpoint){
+            padding: 120px 0 30px;
+        }
+    }
+    &__form{
+        width: 100%;
+        max-width: 400px;
+
+        .wpcf7{
+
+            form{
+                background-color: $white;
+                padding: 30px;
+                border-radius: 16px;
+
+                @media (max-width: $smallBreakpoint){
+                    padding: 20px;
+                }
+
+                .form-title{
+                    text-align: center;
+                    margin-bottom: 30px;
+
+                    @media (max-width: $smallBreakpoint){
+                        margin-bottom: 20px;
+                    }
+                }
+
+                p{
+                    position: relative;
+                    margin-bottom: 20px;
+
+                    @media (max-width: $smallBreakpoint){
+                        margin-bottom: 15px;
+                    }
+
+                    &.terms-info{
+                        font-size: 12px;
+                        margin-bottom: 0;
+                        text-align: center;
+
+                        a{
+                            color: #27252F;
+
+                            &:hover{
+                                color: $black;
+                            }
+                        }
+                    }
+
+                    label{
+                        span.label-text{
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+
+                        input,
+                        textarea{
+                            width: 100%;
+                            font-family: $primaryFont;
+                            font-size: 15px;
+                            font-size: 500;
+                            padding: 14px 18px 14px 18px;
+                            border-radius: 8px;
+                            border: 1px solid $gray;
+                            color: $black;
+
+                            &::placeholder{
+                                color: $gray;
+                            }
+
+                            &.wpcf7-not-valid{
+                                border-color: $red;
+                            }
+                        }
+                        textarea{
+                            max-width: 100%;
+                            height: 125px;
+                            max-height: 300px;
+                            min-height: 50px;
+                        }
+
+                        .wpcf7-not-valid-tip{
+                            font-size: 11px;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .wpcf7-submit{
+                        width: 100%;
+                        height: 60px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $orange;
+                        color: $white;
+                        border: none;
+                        border-radius: 8px;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: $red;
+                        }
+                    }
+                    .wpcf7-spinner{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $orange;
+
+                        &::before{
+                            position: static!important;
+                        }
+                    }
+                }
+
+                .wpcf7-response-output{
+                    display: none!important;
+                }
+            }
+        }
+    }
+    &__modal{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $blueLight;
+        z-index: 9990;
+
+        &-container{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-box{
+            width: 100%;
+            max-width: 550px;
+            padding: 60px 50px 70px;
+            background-color: $white;
+            position: relative;
+        }
+        &-close{
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 13px;
+            font-weight: 500;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 15px;
+                min-width: 15px;
+                height: 15px;
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.21863 2L13.5 14.2814' stroke='%236F6F72' stroke-linecap='round'/%3E%3Cpath d='M13.272 2L0.990552 14.2814' stroke='%236F6F72' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-left: 10px;
+            }
+        }
+        &-content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        &-icon{
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        &-submessage{
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+        &-message{
+            font-weight: 600;
+            line-height: 1.25;
+        }
+    }
+}

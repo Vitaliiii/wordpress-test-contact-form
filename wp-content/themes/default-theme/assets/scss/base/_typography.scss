@@ -1,0 +1,99 @@
+html {
+  font-family: $primaryFont;
+  font-weight: 500;
+  color: $dark;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-style: normal;
+}
+
+// Header Styles
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: $headingLineHeight;
+  color: $dark;
+  font-family: $primaryFont;
+  font-weight: 600;
+
+  a {
+    font-weight: inherit;
+  }
+}
+
+h1,
+.h1{
+  font-size: 48px;
+
+  @media (max-width: $smallBreakpoint){
+    font-size: 42px;
+  }
+}
+
+h2,
+.h2{
+  font-size: 40px;
+
+  @media (max-width: $smallBreakpoint){
+    font-size: 34px;
+  }
+}
+
+h3,
+.h3{
+  font-size: 32px;
+
+  @media (max-width: $smallBreakpoint){
+    font-size: 24px;
+  }
+}
+
+h4,
+.h4{
+  font-size: 22px;
+
+  @media (max-width: $smallBreakpoint){
+    font-size: 20px;
+  }
+}
+
+h5,
+.h5{
+  font-size: 20px;
+
+  @media (max-width: $smallBreakpoint){
+    font-size: 18px;
+  }
+}
+
+h6,
+.h6{
+  font-size: 18px;
+
+  @media (max-width: $smallBreakpoint){
+    font-size: 16px;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+// Text Styles
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  transition: all .3s ease;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
